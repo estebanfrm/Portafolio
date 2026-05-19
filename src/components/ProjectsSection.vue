@@ -22,7 +22,7 @@ const visibleProjects = computed(() => {
       <SectionHeading
         eyebrow="Proyectos"
         title="Proyectos destacados"
-        text="Tarjetas iniciales fáciles de reemplazar por proyectos reales de GitHub, demos académicas o prototipos de IA."
+        text="Selección de proyectos reales con enfoque académico y profesional, mostrando trabajo fullstack, documentación y construcción de interfaces modernas."
       />
 
       <div class="filter-tabs reveal" aria-label="Filtrar proyectos">
@@ -43,6 +43,7 @@ const visibleProjects = computed(() => {
           v-for="project in visibleProjects"
           :key="project.name"
           class="project-card reveal"
+          :class="{ featured: project.featured }"
         >
           <div class="project-header">
             <span>{{ project.status }}</span>
@@ -59,7 +60,17 @@ const visibleProjects = computed(() => {
 
           <div class="card-actions">
             <a :href="project.github" target="_blank" rel="noreferrer">GitHub</a>
-            <a :href="project.demo" target="_blank" rel="noreferrer">Demo</a>
+            <a
+              v-if="project.demo"
+              :href="project.demo"
+              :target="project.demo.startsWith('#') ? '_self' : '_blank'"
+              rel="noreferrer"
+            >
+              {{ project.demoLabel || 'Demo' }}
+            </a>
+            <span v-else class="disabled-action">
+              {{ project.demoLabel || 'Próximamente' }}
+            </span>
           </div>
         </article>
       </div>

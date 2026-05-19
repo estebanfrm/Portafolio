@@ -50,31 +50,26 @@ export const skills = [
 
 export const projects = [
   {
-    name: 'API de Gestión Académica',
+    name: 'Sistema de Gestión para Restaurantes',
     description:
-      'Proyecto de ejemplo para administrar estudiantes, cursos y notas mediante una API REST con autenticación básica.',
-    technologies: ['FastAPI', 'PostgreSQL', 'Docker'],
-    github: 'https://github.com/tu-usuario/proyecto-api',
-    demo: '#',
-    status: 'Backend',
+      'Plataforma fullstack para gestión de restaurantes, pedidos, inventario y usuarios. Proyecto académico colaborativo desarrollado con arquitectura backend moderna y frontend multiplataforma.',
+    technologies: ['FastAPI', 'PostgreSQL', 'Flutter', 'Docker', 'SQLModel', 'GitHub'],
+    github: 'https://github.com/anfeMurillo/unicatolica_project_6th_semester',
+    demo: '',
+    demoLabel: 'Próximamente',
+    status: 'Fullstack',
+    featured: true,
   },
   {
-    name: 'Dashboard Web Universitario',
+    name: 'Portafolio Profesional',
     description:
-      'Interfaz responsive para visualizar métricas, registros y reportes de un sistema académico.',
-    technologies: ['Vue', 'Vite', 'CSS', 'JavaScript'],
-    github: 'https://github.com/tu-usuario/dashboard-vue',
-    demo: '#',
+      'Portafolio personal desarrollado para mostrar proyectos, tecnologías y experiencia como desarrollador junior backend/fullstack.',
+    technologies: ['Vue', 'Vite', 'JavaScript', 'CSS'],
+    github: 'https://github.com/estebanfrm/Portafolio',
+    demo: '#inicio',
+    demoLabel: 'Demo',
     status: 'Frontend',
-  },
-  {
-    name: 'Asistente IA para Productividad',
-    description:
-      'Concepto de herramienta que usa IA para resumir tareas, organizar información y apoyar flujos administrativos.',
-    technologies: ['Python', 'Node.js', 'IA', 'MySQL'],
-    github: 'https://github.com/tu-usuario/asistente-ia',
-    demo: '#',
-    status: 'IA',
+    featured: false,
   },
 ]
 
