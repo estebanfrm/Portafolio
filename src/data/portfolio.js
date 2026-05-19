@@ -5,10 +5,10 @@ export const profile = {
   tagline:
     'Construyo soluciones web limpias, funcionales y orientadas al aprendizaje continuo, con interés especial en IA aplicada.',
   location: 'Colombia',
-  email: 'tuemail@correo.com',
-  linkedin: 'https://www.linkedin.com/in/tu-usuario',
-  github: 'https://github.com/tu-usuario',
-  whatsapp: 'https://wa.me/573001234567',
+  email: 'giraldomontenegro2304@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/esteban-giraldo-frm-6411ba372/',
+  github: 'https://github.com/estebanfrm',
+  whatsapp: 'https://wa.me/573126822833',
   cv: '/cv-esteban.pdf',
 }
 
