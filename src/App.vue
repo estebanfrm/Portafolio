@@ -27,7 +27,7 @@ const closeMenu = () => {
   <header class="site-header">
     <nav class="nav container" aria-label="Navegación principal">
       <a class="brand" href="#inicio" @click="closeMenu">
-        <span class="brand-mark">EG</span>
+        <img class="brand-mark" src="/perfil.png" alt="Esteban Giraldo" />
         <span>Esteban</span>
       </a>
 

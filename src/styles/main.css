@@ -104,14 +104,12 @@ a {
 }
 
 .brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
+  width: 50px;
+  height: 50px;
   border: 1px solid rgba(78, 168, 255, 0.45);
-  border-radius: var(--radius);
+  border-radius: 12px;
   background: rgba(78, 168, 255, 0.13);
-  color: var(--blue);
+  object-fit: cover;
 }
 
 .nav-links {
