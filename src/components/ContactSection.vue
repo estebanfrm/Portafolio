@@ -3,10 +3,20 @@ import { profile } from '../data/portfolio'
 import SectionHeading from './SectionHeading.vue'
 
 const contactLinks = [
-  { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { label: 'LinkedIn', value: 'Perfil profesional', href: profile.linkedin },
-  { label: 'GitHub', value: 'Repositorios', href: profile.github },
-  { label: 'WhatsApp', value: 'Mensaje directo', href: profile.whatsapp },
+  {
+    label: 'Email',
+    value: profile.email,
+    href: `mailto:${profile.email}`,
+    external: false,
+  },
+  {
+    label: 'LinkedIn',
+    value: 'Perfil profesional',
+    href: profile.linkedin,
+    external: true,
+  },
+  { label: 'GitHub', value: 'Repositorios', href: profile.github, external: true },
+  { label: 'WhatsApp', value: 'Mensaje directo', href: profile.whatsapp, external: true },
 ]
 </script>
 
@@ -24,8 +34,8 @@ const contactLinks = [
           v-for="link in contactLinks"
           :key="link.label"
           :href="link.href"
-          target="_blank"
-          rel="noreferrer"
+          :target="link.external ? '_blank' : undefined"
+          :rel="link.external ? 'noopener noreferrer' : undefined"
           class="contact-link"
         >
           <span>{{ link.label }}</span>

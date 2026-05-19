@@ -31,7 +31,7 @@ import SectionHeading from './SectionHeading.vue'
               v-if="item.linkUrl"
               :href="item.linkUrl"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {{ item.linkLabel }}
             </a>

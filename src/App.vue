@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import AboutSection from './components/AboutSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import EducationSection from './components/EducationSection.vue'
@@ -18,21 +18,55 @@ const navItems = [
 
 const isMenuOpen = ref(false)
 const isProfileModalOpen = ref(false)
+const profileTrigger = ref(null)
+const profileCloseButton = ref(null)
+let lastFocusedElement = null
+let previousBodyOverflow = ''
 
 const closeMenu = () => {
   isMenuOpen.value = false
 }
 
 const openProfileModal = () => {
+  lastFocusedElement = document.activeElement
+  previousBodyOverflow = document.body.style.overflow
+  document.body.style.overflow = 'hidden'
   isProfileModalOpen.value = true
+
+  nextTick(() => {
+    profileCloseButton.value?.focus()
+  })
 }
 
 const closeProfileModal = () => {
+  if (!isProfileModalOpen.value) return
+
   isProfileModalOpen.value = false
+  document.body.style.overflow = previousBodyOverflow
+
+  nextTick(() => {
+    if (lastFocusedElement instanceof HTMLElement) {
+      lastFocusedElement.focus()
+    } else {
+      profileTrigger.value?.focus()
+    }
+  })
 }
 
 const handleKeydown = (event) => {
-  if (event.key === 'Escape') closeProfileModal()
+  if (event.key === 'Escape') {
+    if (isProfileModalOpen.value) {
+      closeProfileModal()
+      return
+    }
+
+    closeMenu()
+  }
+
+  if (event.key === 'Tab' && isProfileModalOpen.value) {
+    event.preventDefault()
+    profileCloseButton.value?.focus()
+  }
 }
 
 onMounted(() => {
@@ -41,21 +75,25 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', handleKeydown)
+  document.body.style.overflow = previousBodyOverflow
 })
 </script>
 
 <template>
   <header class="site-header">
     <nav class="nav container" aria-label="Navegación principal">
-      <a class="brand" href="#inicio" @click="closeMenu">
-        <img
-          class="brand-mark"
-          src="/perfil.png"
-          alt="Esteban Giraldo"
-          @click.prevent.stop="openProfileModal"
-        />
-        <span>Esteban</span>
-      </a>
+      <div class="brand" aria-label="Esteban Giraldo">
+        <button
+          ref="profileTrigger"
+          class="brand-photo-button"
+          type="button"
+          aria-label="Ampliar foto de Esteban Giraldo"
+          @click="openProfileModal"
+        >
+          <img class="brand-mark" src="/perfil.png" alt="" />
+        </button>
+        <a class="brand-name" href="#inicio" @click="closeMenu">Esteban</a>
+      </div>
 
       <button
         class="menu-button"
@@ -71,12 +109,7 @@ onBeforeUnmount(() => {
       </button>
 
       <div id="main-menu" class="nav-links" :class="{ 'is-open': isMenuOpen }">
-        <a
-          v-for="item in navItems"
-          :key="item.href"
-          :href="item.href"
-          @click="closeMenu"
-        >
+        <a v-for="item in navItems" :key="item.href" :href="item.href" @click="closeMenu">
           {{ item.label }}
         </a>
       </div>
@@ -92,6 +125,7 @@ onBeforeUnmount(() => {
     @click.self="closeProfileModal"
   >
     <button
+      ref="profileCloseButton"
       class="profile-modal-close"
       type="button"
       aria-label="Cerrar foto"

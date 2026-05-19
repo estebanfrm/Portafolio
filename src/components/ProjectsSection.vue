@@ -32,6 +32,7 @@ const visibleProjects = computed(() => {
           class="chip-button"
           :class="{ active: activeType === type }"
           type="button"
+          :aria-pressed="activeType === type"
           @click="activeType = type"
         >
           {{ type }}
@@ -60,12 +61,12 @@ const visibleProjects = computed(() => {
           </div>
 
           <div class="card-actions">
-            <a :href="project.github" target="_blank" rel="noreferrer">GitHub</a>
+            <a :href="project.github" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a
               v-if="project.demo"
               :href="project.demo"
-              :target="project.demo.startsWith('#') ? '_self' : '_blank'"
-              rel="noreferrer"
+              :target="project.demo.startsWith('#') ? undefined : '_blank'"
+              :rel="project.demo.startsWith('#') ? undefined : 'noopener noreferrer'"
             >
               {{ project.demoLabel || 'Demo' }}
             </a>

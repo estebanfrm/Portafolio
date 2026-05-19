@@ -29,6 +29,7 @@ const visibleSkills = computed(() => {
           class="chip-button"
           :class="{ active: activeCategory === category }"
           type="button"
+          :aria-pressed="activeCategory === category"
           @click="activeCategory = category"
         >
           {{ category }}
