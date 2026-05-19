@@ -12,7 +12,7 @@ import SectionHeading from './SectionHeading.vue'
         text="Busco mi primera oportunidad como desarrollador junior, aportando disciplina, curiosidad técnica y una base académica sólida."
       />
 
-      <div class="about-panel reveal">
+      <div v-reveal="{ delay: 140 }" class="about-panel">
         <p>{{ about.intro }}</p>
         <p>{{ about.details }}</p>
 

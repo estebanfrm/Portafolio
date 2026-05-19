@@ -12,7 +12,7 @@ import SectionHeading from './SectionHeading.vue'
         text="Experiencia útil para equipos de desarrollo: comunicación, orden, cumplimiento y manejo responsable de información."
       />
 
-      <div class="timeline reveal">
+      <div v-reveal="{ delay: 140 }" class="timeline">
         <article v-for="item in experience" :key="item.role" class="timeline-item">
           <span class="timeline-dot"></span>
           <p class="timeline-period">{{ item.period }}</p>

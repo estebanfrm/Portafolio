@@ -25,7 +25,7 @@ const visibleProjects = computed(() => {
         text="Selección de proyectos reales con enfoque académico y profesional, mostrando trabajo fullstack, documentación y construcción de interfaces modernas."
       />
 
-      <div class="filter-tabs reveal" aria-label="Filtrar proyectos">
+      <div v-reveal="{ delay: 100 }" class="filter-tabs" aria-label="Filtrar proyectos">
         <button
           v-for="type in projectTypes"
           :key="type"
@@ -40,9 +40,10 @@ const visibleProjects = computed(() => {
 
       <div class="projects-grid">
         <article
-          v-for="project in visibleProjects"
+          v-for="(project, index) in visibleProjects"
           :key="project.name"
-          class="project-card reveal"
+          v-reveal="{ delay: 150 + index * 120 }"
+          class="project-card"
           :class="{ featured: project.featured }"
         >
           <div class="project-header">

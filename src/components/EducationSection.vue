@@ -14,9 +14,10 @@ import SectionHeading from './SectionHeading.vue'
 
       <div class="education-grid">
         <article
-          v-for="item in education"
+          v-for="(item, index) in education"
           :key="item.title"
-          class="info-card education-card reveal"
+          v-reveal="{ delay: 120 + index * 120 }"
+          class="info-card education-card"
         >
           <div>
             <p class="timeline-period">{{ item.period }}</p>

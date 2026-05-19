@@ -5,7 +5,7 @@ import { profile, stats } from '../data/portfolio'
 <template>
   <section id="inicio" class="hero section">
     <div class="container hero-grid">
-      <div class="hero-content reveal">
+      <div v-reveal class="hero-content">
         <p class="eyebrow">{{ profile.roleFocus }}</p>
         <h1>{{ profile.name }}</h1>
         <p class="hero-title">{{ profile.title }}</p>
@@ -18,7 +18,7 @@ import { profile, stats } from '../data/portfolio'
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="Resumen profesional">
+      <div v-reveal="{ delay: 160 }" class="hero-visual" aria-label="Resumen profesional">
         <div class="terminal-card">
           <div class="terminal-top">
             <span></span>
@@ -36,7 +36,12 @@ import { profile, stats } from '../data/portfolio'
         </div>
 
         <div class="stats-grid">
-          <article v-for="stat in stats" :key="stat.label" class="stat-card">
+          <article
+            v-for="(stat, index) in stats"
+            :key="stat.label"
+            v-reveal="{ delay: 260 + index * 80 }"
+            class="stat-card"
+          >
             <strong>{{ stat.value }}</strong>
             <span>{{ stat.label }}</span>
           </article>

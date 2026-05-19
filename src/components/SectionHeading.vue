@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="section-heading reveal">
+  <div v-reveal class="section-heading">
     <p class="eyebrow">{{ eyebrow }}</p>
     <h2>{{ title }}</h2>
     <p>{{ text }}</p>

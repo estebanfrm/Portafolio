@@ -19,7 +19,7 @@ const contactLinks = [
         text="Disponible para prácticas, proyectos académicos avanzados y oportunidades como desarrollador junior con enfoque en IA."
       />
 
-      <div class="contact-card reveal">
+      <div v-reveal="{ delay: 140 }" class="contact-card">
         <a
           v-for="link in contactLinks"
           :key="link.label"

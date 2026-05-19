@@ -22,7 +22,7 @@ const visibleSkills = computed(() => {
         text="Stack académico y práctico enfocado en desarrollo web, APIs, datos, herramientas de trabajo e inteligencia artificial."
       />
 
-      <div class="filter-tabs reveal" aria-label="Filtrar habilidades">
+      <div v-reveal="{ delay: 100 }" class="filter-tabs" aria-label="Filtrar habilidades">
         <button
           v-for="category in categories"
           :key="category"
@@ -37,9 +37,10 @@ const visibleSkills = computed(() => {
 
       <div class="skills-grid">
         <article
-          v-for="group in visibleSkills"
+          v-for="(group, index) in visibleSkills"
           :key="group.category"
-          class="skill-card reveal"
+          v-reveal="{ delay: 140 + index * 90 }"
+          class="skill-card"
         >
           <h3>{{ group.category }}</h3>
           <div class="tag-list">
