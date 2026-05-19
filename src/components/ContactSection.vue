@@ -15,8 +15,8 @@ const contactLinks = [
     <div class="container contact-grid">
       <SectionHeading
         eyebrow="Contacto"
-        title="Hablemos de una oportunidad junior"
-        text="Disponible para prácticas, proyectos académicos avanzados y oportunidades como desarrollador junior con enfoque en IA."
+        title="Disponible para proyectos"
+        text="Abierto a colaborar en desarrollo web, IA, prácticas profesionales y proyectos tecnológicos donde pueda aportar soluciones claras, compromiso y aprendizaje continuo."
       />
 
       <div v-reveal="{ delay: 140 }" class="contact-card">
