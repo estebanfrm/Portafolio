@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import AboutSection from './components/AboutSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import EducationSection from './components/EducationSection.vue'
@@ -17,17 +17,43 @@ const navItems = [
 ]
 
 const isMenuOpen = ref(false)
+const isProfileModalOpen = ref(false)
 
 const closeMenu = () => {
   isMenuOpen.value = false
 }
+
+const openProfileModal = () => {
+  isProfileModalOpen.value = true
+}
+
+const closeProfileModal = () => {
+  isProfileModalOpen.value = false
+}
+
+const handleKeydown = (event) => {
+  if (event.key === 'Escape') closeProfileModal()
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', handleKeydown)
+})
 </script>
 
 <template>
   <header class="site-header">
     <nav class="nav container" aria-label="Navegación principal">
       <a class="brand" href="#inicio" @click="closeMenu">
-        <img class="brand-mark" src="/perfil.png" alt="Esteban Giraldo" />
+        <img
+          class="brand-mark"
+          src="/perfil.png"
+          alt="Esteban Giraldo"
+          @click.prevent.stop="openProfileModal"
+        />
         <span>Esteban</span>
       </a>
 
@@ -56,6 +82,25 @@ const closeMenu = () => {
       </div>
     </nav>
   </header>
+
+  <div
+    v-if="isProfileModalOpen"
+    class="profile-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Foto de Esteban Giraldo"
+    @click.self="closeProfileModal"
+  >
+    <button
+      class="profile-modal-close"
+      type="button"
+      aria-label="Cerrar foto"
+      @click="closeProfileModal"
+    >
+      ×
+    </button>
+    <img class="profile-modal-image" src="/perfil.png" alt="Esteban Giraldo" />
+  </div>
 
   <main>
     <HeroSection />
