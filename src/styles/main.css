@@ -567,6 +567,50 @@ a {
 
 .education-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.education-card {
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 290px;
+  background:
+    linear-gradient(135deg, rgba(78, 168, 255, 0.08), transparent 48%),
+    var(--surface);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.education-card::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(135deg, rgba(83, 224, 212, 0.16), transparent 44%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.education-card:hover {
+  border-color: rgba(83, 224, 212, 0.36);
+  box-shadow: 0 24px 80px rgba(78, 168, 255, 0.16);
+}
+
+.education-card:hover::before {
+  opacity: 1;
+}
+
+.education-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.education-actions {
+  padding-top: 8px;
 }
 
 .contact-section {

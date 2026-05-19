@@ -95,6 +95,8 @@ export const education = [
     period: '6.º semestre en 2026',
     description:
       'Formación académica en programación, desarrollo web, bases de datos, arquitectura de software y fundamentos de ingeniería.',
+    linkLabel: 'Universidad',
+    linkUrl: 'https://unicatolica.edu.co',
   },
   {
     title: 'Inglés intermedio',
@@ -102,6 +104,8 @@ export const education = [
     period: 'Desde octubre de 2025',
     description:
       'Fortalecimiento continuo de comunicación en inglés para contextos académicos y profesionales.',
+    linkLabel: 'Instituto',
+    linkUrl: 'https://learnenglish.edu.co/web2/',
   },
 ]
 
