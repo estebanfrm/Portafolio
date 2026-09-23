@@ -1,38 +1,48 @@
 <script setup>
-import { computed, ref } from 'vue'
-import { skills } from '../data/portfolio'
+import { computed, ref, watch } from 'vue'
+import { useI18n } from '../i18n'
 import SectionHeading from './SectionHeading.vue'
 
-const activeCategory = ref('Todas')
+const { locale, t } = useI18n()
 
-const categories = computed(() => ['Todas', ...skills.map((skill) => skill.category)])
+// null means "all categories"; category names are translated, so the filter resets on language change.
+const activeCategory = ref(null)
+
+watch(locale, () => {
+  activeCategory.value = null
+})
 
 const visibleSkills = computed(() => {
-  if (activeCategory.value === 'Todas') return skills
-  return skills.filter((skill) => skill.category === activeCategory.value)
+  if (activeCategory.value === null) return t.value.skills
+  return t.value.skills.filter((skill) => skill.category === activeCategory.value)
 })
 </script>
 
 <template>
   <section id="skills" class="section alt-section">
     <div class="container">
-      <SectionHeading
-        eyebrow="Skills"
-        title="Tecnologías y herramientas"
-        text="Stack académico y práctico enfocado en desarrollo web, APIs, datos, herramientas de trabajo e inteligencia artificial."
-      />
+      <SectionHeading v-bind="t.sections.skills" />
 
-      <div v-reveal="{ delay: 100 }" class="filter-tabs" aria-label="Filtrar habilidades">
+      <div v-reveal="{ delay: 100 }" class="filter-tabs" :aria-label="t.ui.filterSkills">
         <button
-          v-for="category in categories"
-          :key="category"
           class="chip-button"
-          :class="{ active: activeCategory === category }"
+          :class="{ active: activeCategory === null }"
           type="button"
-          :aria-pressed="activeCategory === category"
-          @click="activeCategory = category"
+          :aria-pressed="activeCategory === null"
+          @click="activeCategory = null"
         >
-          {{ category }}
+          {{ t.ui.allSkills }}
+        </button>
+        <button
+          v-for="skill in t.skills"
+          :key="skill.category"
+          class="chip-button"
+          :class="{ active: activeCategory === skill.category }"
+          type="button"
+          :aria-pressed="activeCategory === skill.category"
+          @click="activeCategory = skill.category"
+        >
+          {{ skill.category }}
         </button>
       </div>
 

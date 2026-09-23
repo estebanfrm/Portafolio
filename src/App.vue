@@ -7,14 +7,9 @@ import ExperienceSection from './components/ExperienceSection.vue'
 import HeroSection from './components/HeroSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
+import { useI18n } from './i18n'
 
-const navItems = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Sobre mí', href: '#sobre-mi' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Contacto', href: '#contacto' },
-]
+const { locale, t, setLocale, localeOptions } = useI18n()
 
 const isMenuOpen = ref(false)
 const isProfileModalOpen = ref(false)
@@ -81,13 +76,13 @@ onBeforeUnmount(() => {
 
 <template>
   <header class="site-header">
-    <nav class="nav container" aria-label="Navegación principal">
+    <nav class="nav container" :aria-label="t.ui.mainNav">
       <div class="brand" aria-label="Esteban Giraldo">
         <button
           ref="profileTrigger"
           class="brand-photo-button"
           type="button"
-          aria-label="Ampliar foto de Esteban Giraldo"
+          :aria-label="t.ui.openPhoto"
           @click="openProfileModal"
         >
           <img class="brand-mark" src="/perfil.png" alt="" />
@@ -95,23 +90,40 @@ onBeforeUnmount(() => {
         <a class="brand-name" href="#inicio" @click="closeMenu">Esteban</a>
       </div>
 
-      <button
-        class="menu-button"
-        type="button"
-        :aria-label="isMenuOpen ? 'Cerrar menú' : 'Abrir menú'"
-        :aria-expanded="isMenuOpen"
-        aria-controls="main-menu"
-        @click="isMenuOpen = !isMenuOpen"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <div id="main-menu" class="nav-links" :class="{ 'is-open': isMenuOpen }">
-        <a v-for="item in navItems" :key="item.href" :href="item.href" @click="closeMenu">
+        <a v-for="item in t.ui.nav" :key="item.href" :href="item.href" @click="closeMenu">
           {{ item.label }}
         </a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" :aria-label="t.ui.languageSwitch">
+          <button
+            v-for="option in localeOptions"
+            :key="option.code"
+            type="button"
+            :class="{ active: locale === option.code }"
+            :aria-pressed="locale === option.code"
+            :aria-label="option.name"
+            :lang="option.code"
+            @click="setLocale(option.code)"
+          >
+            {{ option.short }}
+          </button>
+        </div>
+
+        <button
+          class="menu-button"
+          type="button"
+          :aria-label="isMenuOpen ? t.ui.closeMenu : t.ui.openMenu"
+          :aria-expanded="isMenuOpen"
+          aria-controls="main-menu"
+          @click="isMenuOpen = !isMenuOpen"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
   </header>
@@ -121,14 +133,14 @@ onBeforeUnmount(() => {
     class="profile-modal"
     role="dialog"
     aria-modal="true"
-    aria-label="Foto de Esteban Giraldo"
+    :aria-label="t.ui.photo"
     @click.self="closeProfileModal"
   >
     <button
       ref="profileCloseButton"
       class="profile-modal-close"
       type="button"
-      aria-label="Cerrar foto"
+      :aria-label="t.ui.closePhoto"
       @click="closeProfileModal"
     >
       ×
