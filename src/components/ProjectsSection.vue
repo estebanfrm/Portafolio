@@ -1,31 +1,47 @@
 <script setup>
-import { computed, ref } from 'vue'
-import { projects } from '../data/portfolio'
+import { computed, ref, watch } from 'vue'
+import { useI18n } from '../i18n'
 import SectionHeading from './SectionHeading.vue'
 
-const activeType = ref('Todos')
+const { locale, t } = useI18n()
+
+// null means "all types"; the filter resets on language change so it never points at a missing label.
+const activeType = ref(null)
+
+watch(locale, () => {
+  activeType.value = null
+})
 
 const projectTypes = computed(() => [
-  'Todos',
-  ...new Set(projects.map((project) => project.status)),
+  ...new Set(t.value.projects.map((project) => project.status)),
 ])
 
 const visibleProjects = computed(() => {
-  if (activeType.value === 'Todos') return projects
-  return projects.filter((project) => project.status === activeType.value)
+  if (activeType.value === null) return t.value.projects
+  return t.value.projects.filter((project) => project.status === activeType.value)
 })
 </script>
 
 <template>
   <section id="proyectos" class="section">
     <div class="container">
-      <SectionHeading
-        eyebrow="Proyectos"
-        title="Proyectos destacados"
-        text="Selección de proyectos reales con enfoque académico y profesional, mostrando trabajo fullstack, documentación y construcción de interfaces modernas."
-      />
+      <SectionHeading v-bind="t.sections.projects" />
 
-      <div v-reveal="{ delay: 100 }" class="filter-tabs" aria-label="Filtrar proyectos">
+      <div
+        v-if="projectTypes.length > 1"
+        v-reveal="{ delay: 100 }"
+        class="filter-tabs"
+        :aria-label="t.ui.filterProjects"
+      >
+        <button
+          class="chip-button"
+          :class="{ active: activeType === null }"
+          type="button"
+          :aria-pressed="activeType === null"
+          @click="activeType = null"
+        >
+          {{ t.ui.allProjects }}
+        </button>
         <button
           v-for="type in projectTypes"
           :key="type"
@@ -42,7 +58,7 @@ const visibleProjects = computed(() => {
       <div class="projects-grid">
         <article
           v-for="(project, index) in visibleProjects"
-          :key="project.name"
+          :key="project.github"
           v-reveal="{ delay: 150 + index * 120 }"
           class="project-card"
           :class="{ featured: project.featured }"
@@ -68,10 +84,10 @@ const visibleProjects = computed(() => {
               :target="project.demo.startsWith('#') ? undefined : '_blank'"
               :rel="project.demo.startsWith('#') ? undefined : 'noopener noreferrer'"
             >
-              {{ project.demoLabel || 'Demo' }}
+              {{ project.demoLabel || t.ui.demo }}
             </a>
             <span v-else class="disabled-action">
-              {{ project.demoLabel || 'Próximamente' }}
+              {{ project.demoLabel || t.ui.comingSoon }}
             </span>
           </div>
         </article>

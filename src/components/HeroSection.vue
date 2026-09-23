@@ -1,24 +1,29 @@
 <script setup>
-import { profile, stats } from '../data/portfolio'
+import { profile } from '../data/portfolio'
+import { useI18n } from '../i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section id="inicio" class="hero section">
     <div class="container hero-grid">
       <div v-reveal class="hero-content">
-        <p class="eyebrow">{{ profile.roleFocus }}</p>
+        <p class="eyebrow">{{ t.profile.roleFocus }}</p>
         <h1>{{ profile.name }}</h1>
-        <p class="hero-title">{{ profile.title }}</p>
-        <p class="hero-copy">{{ profile.tagline }}</p>
+        <p class="hero-title">{{ t.profile.title }}</p>
+        <p class="hero-copy">{{ t.profile.tagline }}</p>
 
-        <div class="hero-actions" aria-label="Acciones principales">
-          <a class="button primary" href="#proyectos">Ver proyectos</a>
-          <a class="button secondary" :href="profile.cv" download>Descargar CV</a>
-          <a class="button ghost" href="#contacto">Contacto</a>
+        <div class="hero-actions" :aria-label="t.ui.heroActions">
+          <a class="button primary" href="#proyectos">{{ t.ui.viewProjects }}</a>
+          <a class="button secondary" :href="profile.cv" download>{{
+            t.ui.downloadCv
+          }}</a>
+          <a class="button ghost" href="#contacto">{{ t.ui.contact }}</a>
         </div>
       </div>
 
-      <div v-reveal="{ delay: 160 }" class="hero-visual" aria-label="Resumen profesional">
+      <div v-reveal="{ delay: 160 }" class="hero-visual" :aria-label="t.ui.heroSummary">
         <div class="terminal-card">
           <div class="terminal-top">
             <span></span>
@@ -30,6 +35,7 @@ import { profile, stats } from '../data/portfolio'
             <p>&nbsp;&nbsp;rol: 'Junior Developer',</p>
             <p>&nbsp;&nbsp;focus: 'AI + Web',</p>
             <p>&nbsp;&nbsp;stack: ['Vue', 'Python', 'Node'],</p>
+            <p>&nbsp;&nbsp;ai: ['Claude Code', 'Codex', 'Local LLMs'],</p>
             <p>&nbsp;&nbsp;status: 'learning by building'</p>
             <p>}</p>
           </div>
@@ -37,8 +43,8 @@ import { profile, stats } from '../data/portfolio'
 
         <div class="stats-grid">
           <article
-            v-for="(stat, index) in stats"
-            :key="stat.label"
+            v-for="(stat, index) in t.stats"
+            :key="index"
             v-reveal="{ delay: 260 + index * 80 }"
             class="stat-card"
           >

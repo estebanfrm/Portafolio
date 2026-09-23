@@ -1,21 +1,19 @@
 <script setup>
-import { education } from '../data/portfolio'
+import { useI18n } from '../i18n'
 import SectionHeading from './SectionHeading.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section class="section">
     <div class="container">
-      <SectionHeading
-        eyebrow="Educación"
-        title="Formación académica"
-        text="Formación técnica en curso y aprendizaje continuo del inglés para fortalecer mi perfil como desarrollador junior."
-      />
+      <SectionHeading v-bind="t.sections.education" />
 
       <div class="education-grid">
         <article
-          v-for="(item, index) in education"
-          :key="item.title"
+          v-for="(item, index) in t.education"
+          :key="item.linkUrl"
           v-reveal="{ delay: 120 + index * 120 }"
           class="info-card education-card"
         >
@@ -36,7 +34,7 @@ import SectionHeading from './SectionHeading.vue'
               {{ item.linkLabel }}
             </a>
             <span v-else class="disabled-action">
-              {{ item.linkLabel || 'Próximamente' }}
+              {{ item.linkLabel || t.ui.comingSoon }}
             </span>
           </div>
         </article>

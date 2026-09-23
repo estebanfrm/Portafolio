@@ -21,6 +21,10 @@ src/data/portfolio.js
 
 Ahí puedes cambiar nombre, enlaces, skills, proyectos, educación y datos de contacto.
 
+## Idiomas
+
+La página está en inglés por defecto y tiene un selector EN/ES en la barra de navegación. Los textos de cada idioma viven en `content.en` y `content.es` dentro de `src/data/portfolio.js`; al agregar o cambiar contenido, actualiza ambos. El idioma por defecto se define con `defaultLocale` y la elección del visitante se recuerda en su navegador.
+
 ## Reemplazar CV
 
 Coloca tu hoja de vida en:

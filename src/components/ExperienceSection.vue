@@ -1,19 +1,17 @@
 <script setup>
-import { experience } from '../data/portfolio'
+import { useI18n } from '../i18n'
 import SectionHeading from './SectionHeading.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section class="section alt-section">
     <div class="container split-layout">
-      <SectionHeading
-        eyebrow="Experiencia"
-        title="Base profesional administrativa"
-        text="Experiencia útil para equipos de desarrollo: comunicación, orden, cumplimiento y manejo responsable de información."
-      />
+      <SectionHeading v-bind="t.sections.experience" />
 
       <div v-reveal="{ delay: 140 }" class="timeline">
-        <article v-for="item in experience" :key="item.role" class="timeline-item">
+        <article v-for="(item, index) in t.experience" :key="index" class="timeline-item">
           <span class="timeline-dot"></span>
           <p class="timeline-period">{{ item.period }}</p>
           <h3>{{ item.role }}</h3>

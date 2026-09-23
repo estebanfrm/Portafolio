@@ -1,23 +1,21 @@
 <script setup>
-import { about } from '../data/portfolio'
+import { useI18n } from '../i18n'
 import SectionHeading from './SectionHeading.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section id="sobre-mi" class="section">
     <div class="container split-layout">
-      <SectionHeading
-        eyebrow="Sobre mí"
-        title="Perfil profesional en crecimiento"
-        text="Busco mi primera oportunidad como desarrollador junior, aportando disciplina, curiosidad técnica y una base académica sólida."
-      />
+      <SectionHeading v-bind="t.sections.about" />
 
       <div v-reveal="{ delay: 140 }" class="about-panel">
-        <p>{{ about.intro }}</p>
-        <p>{{ about.details }}</p>
+        <p>{{ t.about.intro }}</p>
+        <p>{{ t.about.details }}</p>
 
         <ul class="check-list">
-          <li v-for="highlight in about.highlights" :key="highlight">
+          <li v-for="highlight in t.about.highlights" :key="highlight">
             {{ highlight }}
           </li>
         </ul>
