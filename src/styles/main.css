@@ -122,7 +122,7 @@ button:focus-visible {
   width: 54px;
   height: 54px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 50%;
   background: transparent;
   cursor: pointer;
   padding: 0;
@@ -131,13 +131,9 @@ button:focus-visible {
 .brand-mark {
   width: 54px;
   height: 54px;
-  border: 1px solid rgba(78, 168, 255, 0.45);
-  border-radius: 12px;
-  background: rgba(78, 168, 255, 0.13);
+  border-radius: 50%;
   display: block;
   object-fit: cover;
-  object-position: center;
-  transform: scale(1.08);
 }
 
 .brand-name {
@@ -157,12 +153,11 @@ button:focus-visible {
 }
 
 .profile-modal-image {
-  width: min(82vw, 560px);
-  max-height: 82vh;
-  border: 1px solid rgba(78, 168, 255, 0.46);
-  border-radius: 18px;
+  width: min(82vw, 82vh, 560px);
+  aspect-ratio: 1;
+  border-radius: 50%;
   box-shadow: 0 24px 90px rgba(78, 168, 255, 0.2);
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .profile-modal-close {
