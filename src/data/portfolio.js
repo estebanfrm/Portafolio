@@ -53,7 +53,7 @@ export const content = {
     },
     profile: {
       title: 'Systems Engineering Student | AI Developer',
-      roleFocus: 'Junior AI Developer / Junior AI Engineer',
+      roleFocus: 'Junior Full Stack Developer',
       tagline:
         'I build clean, functional web solutions driven by continuous learning, with a strong focus on applied AI.',
     },
@@ -263,7 +263,7 @@ export const content = {
     },
     profile: {
       title: 'Estudiante de Ingeniería de Sistemas | Desarrollador de IA',
-      roleFocus: 'Desarrollador IA Junior / Ingeniero IA Junior',
+      roleFocus: 'Desarrollador Full Stack Junior',
       tagline:
         'Construyo soluciones web limpias, funcionales y orientadas al aprendizaje continuo, con interés especial en IA aplicada.',
     },
