@@ -658,6 +658,10 @@ button:focus-visible {
   padding-left: 28px;
 }
 
+.timeline-item + .timeline-item {
+  margin-top: 32px;
+}
+
 .timeline-dot {
   position: absolute;
   top: 10px;
