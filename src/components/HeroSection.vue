@@ -32,7 +32,7 @@ const { t } = useI18n()
           </div>
           <div class="terminal-body">
             <p><span>const</span> perfil = {</p>
-            <p>&nbsp;&nbsp;rol: 'Junior Developer',</p>
+            <p>&nbsp;&nbsp;rol: 'AI Developer',</p>
             <p>&nbsp;&nbsp;focus: 'AI + Web',</p>
             <p>&nbsp;&nbsp;stack: ['Vue', 'Python', 'Node'],</p>
             <p>&nbsp;&nbsp;ai: ['Claude Code', 'Codex', 'Local LLMs'],</p>

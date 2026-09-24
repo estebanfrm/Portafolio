@@ -17,7 +17,7 @@ export const localeOptions = [
 export const content = {
   en: {
     meta: {
-      title: 'Esteban Giraldo | Junior Developer',
+      title: 'Esteban Giraldo | AI Developer',
     },
     ui: {
       mainNav: 'Main navigation',
@@ -52,7 +52,7 @@ export const content = {
       },
     },
     profile: {
-      title: 'Systems Engineering Student | Junior Developer',
+      title: 'Systems Engineering Student | AI Developer',
       roleFocus: 'Junior AI Developer / Junior AI Engineer',
       tagline:
         'I build clean, functional web solutions driven by continuous learning, with a strong focus on applied AI.',
@@ -81,7 +81,7 @@ export const content = {
       education: {
         eyebrow: 'Education',
         title: 'Academic background',
-        text: 'Engineering degree in progress and advanced English certified at B2 level, supporting my profile as a junior developer.',
+        text: 'Engineering degree in progress and advanced English certified at B2 level, supporting my profile as an AI developer.',
       },
       contact: {
         eyebrow: 'Contact',
@@ -227,7 +227,7 @@ export const content = {
   },
   es: {
     meta: {
-      title: 'Esteban Giraldo | Desarrollador Junior',
+      title: 'Esteban Giraldo | Desarrollador de IA',
     },
     ui: {
       mainNav: 'Navegación principal',
@@ -262,7 +262,7 @@ export const content = {
       },
     },
     profile: {
-      title: 'Estudiante de Ingeniería de Sistemas | Desarrollador Junior',
+      title: 'Estudiante de Ingeniería de Sistemas | Desarrollador de IA',
       roleFocus: 'Desarrollador IA Junior / Ingeniero IA Junior',
       tagline:
         'Construyo soluciones web limpias, funcionales y orientadas al aprendizaje continuo, con interés especial en IA aplicada.',
@@ -291,7 +291,7 @@ export const content = {
       education: {
         eyebrow: 'Educación',
         title: 'Formación académica',
-        text: 'Formación de ingeniería en curso e inglés avanzado certificado en nivel B2, que fortalecen mi perfil como desarrollador junior.',
+        text: 'Formación de ingeniería en curso e inglés avanzado certificado en nivel B2, que fortalecen mi perfil como desarrollador de IA.',
       },
       contact: {
         eyebrow: 'Contacto',
