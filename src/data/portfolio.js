@@ -104,11 +104,18 @@ export const content = {
     skills: [
       {
         category: 'Frontend',
-        items: ['HTML', 'CSS', 'JavaScript', 'Vue', 'Vite'],
+        items: ['HTML', 'CSS', 'JavaScript', 'Vue', 'React', 'Vite', 'Tailwind CSS'],
       },
       {
         category: 'Backend',
-        items: ['Python', 'Node.js', 'Express', 'FastAPI'],
+        items: [
+          'Python',
+          'Node.js',
+          'Express',
+          'FastAPI',
+          'Django',
+          'Django REST Framework',
+        ],
       },
       {
         category: 'Databases',
@@ -154,20 +161,20 @@ export const content = {
         featured: true,
       },
       {
-        name: 'Restaurant Management System',
+        name: 'Agrotech Campo-Ciudad',
         description:
-          'Fullstack platform for managing restaurants, orders, inventory and users. A collaborative academic project built with a modern backend architecture and a cross-platform frontend.',
+          'B2B marketplace that connects rural producers with urban buyers such as restaurants, hotels and stores. Role-based flows for producers, buyers and administrators: product catalog with search and filters, order management and an admin panel, on a token-authenticated REST API. Backend deployed on Render and frontend on Vercel.',
         technologies: [
-          'FastAPI',
+          'Django',
+          'Django REST Framework',
+          'React',
+          'Vite',
+          'Tailwind CSS',
           'PostgreSQL',
-          'Flutter',
-          'Docker',
-          'SQLModel',
-          'GitHub',
         ],
-        github: 'https://github.com/anfeMurillo/unicatolica_project_6th_semester',
-        demo: '',
-        demoLabel: 'Coming soon',
+        github: 'https://github.com/estebanfrm/agrotech-campo-ciudad',
+        demo: 'https://agrotech-campo-ciudad.vercel.app',
+        demoLabel: 'Live demo',
         status: 'Fullstack',
         featured: true,
       },
@@ -314,11 +321,18 @@ export const content = {
     skills: [
       {
         category: 'Frontend',
-        items: ['HTML', 'CSS', 'JavaScript', 'Vue', 'Vite'],
+        items: ['HTML', 'CSS', 'JavaScript', 'Vue', 'React', 'Vite', 'Tailwind CSS'],
       },
       {
         category: 'Backend',
-        items: ['Python', 'Node.js', 'Express', 'FastAPI'],
+        items: [
+          'Python',
+          'Node.js',
+          'Express',
+          'FastAPI',
+          'Django',
+          'Django REST Framework',
+        ],
       },
       {
         category: 'Bases de datos',
@@ -364,20 +378,20 @@ export const content = {
         featured: true,
       },
       {
-        name: 'Sistema de Gestión para Restaurantes',
+        name: 'Agrotech Campo-Ciudad',
         description:
-          'Plataforma fullstack para gestión de restaurantes, pedidos, inventario y usuarios. Proyecto académico colaborativo desarrollado con arquitectura backend moderna y frontend multiplataforma.',
+          'Marketplace B2B que conecta productores rurales con compradores urbanos como restaurantes, hoteles y tiendas. Flujos por rol para productores, compradores y administradores: catálogo con búsqueda y filtros, gestión de pedidos y panel de administración, sobre una API REST con autenticación por token. Backend desplegado en Render y frontend en Vercel.',
         technologies: [
-          'FastAPI',
+          'Django',
+          'Django REST Framework',
+          'React',
+          'Vite',
+          'Tailwind CSS',
           'PostgreSQL',
-          'Flutter',
-          'Docker',
-          'SQLModel',
-          'GitHub',
         ],
-        github: 'https://github.com/anfeMurillo/unicatolica_project_6th_semester',
-        demo: '',
-        demoLabel: 'Próximamente',
+        github: 'https://github.com/estebanfrm/agrotech-campo-ciudad',
+        demo: 'https://agrotech-campo-ciudad.vercel.app',
+        demoLabel: 'Demo en vivo',
         status: 'Fullstack',
         featured: true,
       },
