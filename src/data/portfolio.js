@@ -75,7 +75,7 @@ export const content = {
       },
       experience: {
         eyebrow: 'Experience',
-        title: 'Administrative and audit background',
+        title: 'Audit experience',
         text: 'Experience that adds value to development teams: auditing, attention to detail, AI-driven process automation, communication and responsible data handling.',
       },
       education: {
@@ -98,7 +98,7 @@ export const content = {
         'Constant learning and a growth mindset',
         'Solid foundations in web development and APIs',
         'AI-assisted development with Claude Code, Codex and local LLMs',
-        'Audit and administrative experience: attention to detail, organization and responsibility',
+        'Audit experience since 2022, AI-assisted since 2026',
       ],
     },
     skills: [
@@ -174,14 +174,25 @@ export const content = {
     ],
     experience: [
       {
-        role: 'Administrative Assistant & Auditor',
-        company: 'Administrative and audit experience',
-        period: 'Present',
+        role: 'AI-Assisted Auditor',
+        company: 'Billing and documentation audits',
+        period: '2026 – Present',
         description:
-          'I audit documents, billing and supporting records, cross-checking information across sources to catch inconsistencies before submission. I designed an AI-assisted workflow with custom AI skills that automates repetitive steps such as organizing files, extracting data and verifying records, alongside administrative tasks, communication and process follow-up.',
+          'I audit billing, documentation and supporting records with an AI-assisted workflow I designed using custom AI skills. It automates repetitive steps such as organizing files, extracting data and verifying records, so I can focus on cross-checking sources and reporting inconsistencies before submission.',
         achievements: [
-          'Document and billing audits with clear findings reports',
           'AI-assisted audit workflow built with custom AI skills',
+          'Automated file organization, data extraction and record verification',
+          'Clear findings reports before submission',
+        ],
+      },
+      {
+        role: 'Auditor',
+        company: 'Billing and documentation audits',
+        period: 'Dec 2022 – Dec 2025',
+        description:
+          'Audited billing, documentation and supporting records, cross-checking information across sources to catch inconsistencies before submission.',
+        achievements: [
+          'Attention to detail and cross-checking of information',
           'Organization of documents, data and processes',
           'Clear communication and professional conduct',
         ],
@@ -274,7 +285,7 @@ export const content = {
       },
       experience: {
         eyebrow: 'Experiencia',
-        title: 'Base profesional administrativa y de auditoría',
+        title: 'Experiencia en auditoría',
         text: 'Experiencia útil para equipos de desarrollo: auditoría, atención al detalle, automatización de procesos con IA, comunicación y manejo responsable de información.',
       },
       education: {
@@ -297,7 +308,7 @@ export const content = {
         'Aprendizaje constante y mentalidad de mejora',
         'Bases sólidas en desarrollo web y APIs',
         'Desarrollo asistido por IA con Claude Code, Codex y LLM locales',
-        'Experiencia administrativa y en auditoría: atención al detalle, organización y responsabilidad',
+        'Experiencia en auditoría desde 2022, asistida por IA desde 2026',
       ],
     },
     skills: [
@@ -373,14 +384,25 @@ export const content = {
     ],
     experience: [
       {
-        role: 'Asistente administrativo y auditor',
-        company: 'Experiencia administrativa y de auditoría',
-        period: 'Actualidad',
+        role: 'Auditor con IA',
+        company: 'Auditoría de facturación y documentación',
+        period: '2026 – Actualidad',
         description:
-          'Realizo auditorías de documentos, facturación y soportes, cruzando información entre fuentes para detectar inconsistencias antes de radicar. Diseñé un flujo de trabajo asistido por IA con skills personalizadas que automatiza pasos repetitivos como organizar archivos, extraer datos y verificar registros, junto con tareas administrativas, comunicación y seguimiento de procesos.',
+          'Audito facturación, documentación y soportes con un flujo de trabajo asistido por IA que diseñé con skills personalizadas. Automatiza pasos repetitivos como organizar archivos, extraer datos y verificar registros, para enfocarme en cruzar fuentes y reportar inconsistencias antes de radicar.',
         achievements: [
-          'Auditorías de documentos y facturación con reportes claros de hallazgos',
           'Flujo de auditoría asistido por IA con skills personalizadas',
+          'Organización de archivos, extracción de datos y verificación de registros automatizadas',
+          'Reportes claros de hallazgos antes de radicar',
+        ],
+      },
+      {
+        role: 'Auditor',
+        company: 'Auditoría de facturación y documentación',
+        period: 'Dic 2022 – Dic 2025',
+        description:
+          'Auditoría de facturación, documentación y soportes, cruzando información entre fuentes para detectar inconsistencias antes de radicar.',
+        achievements: [
+          'Atención al detalle y cruce de información',
           'Organización de documentos, datos y procesos',
           'Comunicación clara y trato profesional',
         ],
