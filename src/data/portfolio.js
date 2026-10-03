@@ -142,6 +142,25 @@ export const content = {
     ],
     projects: [
       {
+        name: 'Heladería Bot',
+        description:
+          'Ice cream ordering chatbot with WhatsApp Cloud API and web chat sharing the same conversation engine. AI interprets messages; the backend validates flavors, sauces and toppings and calculates totals. Includes a shopping cart, delivery details and inactivity timeouts. Project in development.',
+        technologies: [
+          'Vue 3',
+          'TypeScript',
+          'FastAPI',
+          'PostgreSQL',
+          'Docker',
+          'WhatsApp Cloud API',
+          'AI',
+        ],
+        github: 'https://github.com/estebanfrm/heladeria-bot',
+        demo: '',
+        demoLabel: 'Demo coming soon',
+        status: 'Fullstack',
+        featured: true,
+      },
+      {
         name: 'API Pulse',
         description:
           'Open-source HTTP API testing dashboard that shows responses, latency and a persistent history. Its public demo runs synthetic GET, POST, PUT and DELETE scenarios with rate limits, and a CI quality workflow runs tests, linting and dependency audits.',
@@ -358,6 +377,25 @@ export const content = {
       },
     ],
     projects: [
+      {
+        name: 'Heladería Bot',
+        description:
+          'Chatbot de pedidos para una heladería, con WhatsApp Cloud API y chat web sobre el mismo motor de conversación. La IA interpreta los mensajes; el backend valida sabores, salsas y toppings y calcula los totales. Incluye carrito, datos de entrega y cierre por inactividad. Proyecto en desarrollo.',
+        technologies: [
+          'Vue 3',
+          'TypeScript',
+          'FastAPI',
+          'PostgreSQL',
+          'Docker',
+          'WhatsApp Cloud API',
+          'IA',
+        ],
+        github: 'https://github.com/estebanfrm/heladeria-bot',
+        demo: '',
+        demoLabel: 'Demo próximamente',
+        status: 'Fullstack',
+        featured: true,
+      },
       {
         name: 'API Pulse',
         description:
