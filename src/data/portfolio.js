@@ -9,6 +9,11 @@ export const profile = {
 
 export const defaultLocale = 'en'
 
+export const studio = {
+  name: 'Doble Toma',
+  url: 'https://doble-toma.vercel.app',
+}
+
 export const localeOptions = [
   { code: 'en', short: 'EN', name: 'English' },
   { code: 'es', short: 'ES', name: 'Español' },
@@ -56,6 +61,14 @@ export const content = {
       roleFocus: 'Junior Full Stack Developer',
       tagline:
         'I build clean, functional web solutions driven by continuous learning, with a strong focus on applied AI.',
+    },
+    studio: {
+      heroLink: 'Doble Toma · AI video portfolio',
+      eyebrow: 'Creative project',
+      tagline: 'AI advertising videos for small businesses',
+      description:
+        'A project I build with a friend. Together, we turn ideas into advertising videos using AI. Explore our work and get in touch to create a video for your business.',
+      action: 'View video portfolio',
     },
     sections: {
       about: {
@@ -292,6 +305,14 @@ export const content = {
       roleFocus: 'Desarrollador Full Stack Junior',
       tagline:
         'Construyo soluciones web limpias, funcionales y orientadas al aprendizaje continuo, con interés especial en IA aplicada.',
+    },
+    studio: {
+      heroLink: 'Doble Toma · Portafolio de videos con IA',
+      eyebrow: 'Proyecto creativo',
+      tagline: 'Videos publicitarios con IA para pequeñas empresas',
+      description:
+        'Un proyecto que desarrollo junto a un amigo. Juntos, transformamos ideas en videos publicitarios con IA. Conoce nuestras creaciones y contáctanos para crear un video para tu negocio.',
+      action: 'Ver portafolio de videos',
     },
     sections: {
       about: {

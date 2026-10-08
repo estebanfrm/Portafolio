@@ -2,6 +2,8 @@
 
 Portafolio profesional creado con Vue 3, Vite y CSS moderno.
 
+El inicio y la sección de proyectos enlazan a [Doble Toma](https://doble-toma.vercel.app), el portafolio de videos publicitarios con IA. Su código y despliegue se mantienen en un [repositorio independiente](https://github.com/estebanfrm/doble-toma); la carpeta local `portafolio-videos/` está excluida de este repositorio. El enlace se configura en `studio.url` y sus textos en ambos idiomas dentro de `src/data/portfolio.js`.
+
 ## Ejecutar el proyecto
 
 ```bash

@@ -310,6 +310,22 @@ button:focus-visible {
   margin-top: 34px;
 }
 
+.hero-studio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: 18px;
+  color: #ffc987;
+  font-size: 0.92rem;
+  font-weight: 750;
+}
+
+.hero-studio-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .button {
   min-height: 46px;
   border: 1px solid transparent;
@@ -554,6 +570,61 @@ button:focus-visible {
 .projects-grid {
   grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
   align-items: stretch;
+}
+
+.studio-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 28px;
+  border: 1px solid rgba(255, 201, 135, 0.3);
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, rgba(255, 201, 135, 0.1), var(--surface));
+}
+
+.studio-mark {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border: 1px solid rgba(255, 201, 135, 0.35);
+  border-radius: var(--radius);
+  background: rgba(255, 201, 135, 0.08);
+  color: #ffc987;
+  font-size: 1.55rem;
+  font-weight: 850;
+  letter-spacing: -2px;
+}
+
+.studio-copy .eyebrow {
+  margin-bottom: 6px;
+  color: #ffc987;
+}
+
+.studio-copy h3 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.studio-tagline {
+  margin: 6px 0 0;
+  font-weight: 750;
+}
+
+.studio-description {
+  max-width: 660px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.studio-button {
+  gap: 12px;
+  border-color: rgba(255, 201, 135, 0.45);
+  background: rgba(255, 201, 135, 0.1);
+  color: #ffc987;
 }
 
 .project-card,
@@ -851,6 +922,16 @@ button:focus-visible {
   .project-card,
   .info-card {
     min-height: auto;
+  }
+
+  .studio-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .studio-button {
+    width: 100%;
   }
 
   .terminal-body {

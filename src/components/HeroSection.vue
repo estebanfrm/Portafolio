@@ -1,5 +1,5 @@
 <script setup>
-import { profile } from '../data/portfolio'
+import { profile, studio } from '../data/portfolio'
 import { useI18n } from '../i18n'
 
 const { t } = useI18n()
@@ -21,6 +21,16 @@ const { t } = useI18n()
           }}</a>
           <a class="button ghost" href="#contacto">{{ t.ui.contact }}</a>
         </div>
+
+        <a
+          class="hero-studio-link"
+          :href="studio.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ t.studio.heroLink }}
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
 
       <div v-reveal="{ delay: 160 }" class="hero-visual" :aria-label="t.ui.heroSummary">

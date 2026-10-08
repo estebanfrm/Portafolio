@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
+import { studio } from '../data/portfolio'
 import { useI18n } from '../i18n'
 import SectionHeading from './SectionHeading.vue'
 
@@ -26,6 +27,25 @@ const visibleProjects = computed(() => {
   <section id="proyectos" class="section">
     <div class="container">
       <SectionHeading v-bind="t.sections.projects" />
+
+      <article v-reveal class="studio-card">
+        <div class="studio-mark" aria-hidden="true">DT</div>
+        <div class="studio-copy">
+          <p class="eyebrow">{{ t.studio.eyebrow }}</p>
+          <h3>{{ studio.name }}</h3>
+          <p class="studio-tagline">{{ t.studio.tagline }}</p>
+          <p class="studio-description">{{ t.studio.description }}</p>
+        </div>
+        <a
+          class="button studio-button"
+          :href="studio.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ t.studio.action }}
+          <span aria-hidden="true">↗</span>
+        </a>
+      </article>
 
       <div
         v-if="projectTypes.length > 1"
