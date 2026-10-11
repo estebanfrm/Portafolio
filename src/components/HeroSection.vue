@@ -45,7 +45,7 @@ const { t } = useI18n()
             <p>&nbsp;&nbsp;rol: 'AI Developer',</p>
             <p>&nbsp;&nbsp;focus: 'AI + Web',</p>
             <p>&nbsp;&nbsp;stack: ['Vue', 'Python', 'Node'],</p>
-            <p>&nbsp;&nbsp;ai: ['Claude Code', 'Codex', 'Local LLMs'],</p>
+            <p>&nbsp;&nbsp;ai: ['Claude Code', 'Codex', 'Orca', 'Local LLMs'],</p>
             <p>&nbsp;&nbsp;status: 'learning by building'</p>
             <p>}</p>
           </div>

@@ -106,12 +106,12 @@ export const content = {
       intro:
         "I'm a Systems Engineering student, currently in my 7th semester (2026). I have built academic projects covering frontend, backend, databases and modern development tools.",
       details:
-        'I enjoy creating clear, maintainable and useful software. I work daily with AI development tools such as Claude Code, Codex and local LLMs, using them responsibly to build, document and improve digital products, while strengthening my skills in web development, backend, databases and Docker.',
+        'I enjoy creating clear, maintainable and useful software. I work daily with AI development tools such as Claude Code, Codex and local LLMs, and I orchestrate AI agents with Orca. I use them responsibly to build, document and improve digital products, while strengthening my skills in web development, backend, databases and Docker.',
       highlights: [
         'Constant learning and a growth mindset',
         'Solid foundations in web development and APIs',
-        'AI-assisted development with Claude Code, Codex and local LLMs',
-        'Audit experience since 2022, AI-assisted since 2026',
+        'AI-assisted development with Claude Code, Codex and local LLMs, orchestrating AI agents with Orca',
+        'Professional audit experience with AI-assisted workflows',
       ],
     },
     skills: [
@@ -143,6 +143,7 @@ export const content = {
         items: [
           'Claude Code',
           'Codex',
+          'Orca',
           'Local LLMs',
           'Prompt engineering',
           'AI skills & workflows',
@@ -150,7 +151,7 @@ export const content = {
       },
       {
         category: 'AI & multimedia',
-        items: ['AI image editing', 'AI video editing'],
+        items: ['ComfyUI', 'Higgsfield'],
       },
     ],
     projects: [
@@ -222,18 +223,6 @@ export const content = {
           'AI-assisted audit workflow built with custom AI skills',
           'Automated file organization, data extraction and record verification',
           'Clear findings reports before submission',
-        ],
-      },
-      {
-        role: 'Auditor',
-        company: 'Billing and documentation audits',
-        period: 'Dec 2022 – Dec 2025',
-        description:
-          'Audited billing, documentation and supporting records, cross-checking information across sources to catch inconsistencies before submission.',
-        achievements: [
-          'Attention to detail and cross-checking of information',
-          'Organization of documents, data and processes',
-          'Clear communication and professional conduct',
         ],
       },
     ],
@@ -350,12 +339,12 @@ export const content = {
       intro:
         'Soy estudiante de Ingeniería de Sistemas, actualmente cursando 7.º semestre en 2026. He desarrollado proyectos académicos con frontend, backend, bases de datos y herramientas modernas de desarrollo.',
       details:
-        'Me interesa crear software claro, mantenible y útil. Trabajo a diario con herramientas de desarrollo con IA como Claude Code, Codex y LLM locales, usándolas de forma responsable para construir, documentar y mejorar productos digitales, mientras fortalezco mis habilidades en desarrollo web, backend, bases de datos y Docker.',
+        'Me interesa crear software claro, mantenible y útil. Trabajo a diario con herramientas de desarrollo con IA como Claude Code, Codex y LLM locales, y orquesto agentes de IA mediante Orca. Las uso de forma responsable para construir, documentar y mejorar productos digitales, mientras fortalezco mis habilidades en desarrollo web, backend, bases de datos y Docker.',
       highlights: [
         'Aprendizaje constante y mentalidad de mejora',
         'Bases sólidas en desarrollo web y APIs',
-        'Desarrollo asistido por IA con Claude Code, Codex y LLM locales',
-        'Experiencia en auditoría desde 2022, asistida por IA desde 2026',
+        'Desarrollo asistido por IA con Claude Code, Codex y LLM locales, orquestando agentes de IA mediante Orca',
+        'Experiencia profesional en auditoría con flujos asistidos por IA',
       ],
     },
     skills: [
@@ -387,6 +376,7 @@ export const content = {
         items: [
           'Claude Code',
           'Codex',
+          'Orca',
           'LLM locales',
           'Prompts IA',
           'Skills y flujos de IA',
@@ -394,7 +384,7 @@ export const content = {
       },
       {
         category: 'IA y multimedia',
-        items: ['Edición de imágenes con IA', 'Edición de video con IA'],
+        items: ['ComfyUI', 'Higgsfield'],
       },
     ],
     projects: [
@@ -466,18 +456,6 @@ export const content = {
           'Flujo de auditoría asistido por IA con skills personalizadas',
           'Organización de archivos, extracción de datos y verificación de registros automatizadas',
           'Reportes claros de hallazgos antes de radicar',
-        ],
-      },
-      {
-        role: 'Auditor',
-        company: 'Auditoría de facturación y documentación',
-        period: 'Dic 2022 – Dic 2025',
-        description:
-          'Auditoría de facturación, documentación y soportes, cruzando información entre fuentes para detectar inconsistencias antes de radicar.',
-        achievements: [
-          'Atención al detalle y cruce de información',
-          'Organización de documentos, datos y procesos',
-          'Comunicación clara y trato profesional',
         ],
       },
     ],
